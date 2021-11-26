@@ -12,7 +12,7 @@ shared.Settings = {
 	AutoFarm  = false; -- Auto kills everyone by attaching to their back
 	AntiAFK = true; -- anti afk
 	IgnoreHighPower = false; -- Ignore people with high power :troll:
-	AutoClick = true; -- automatically clicks for you
+	AutoClick = false; -- automatically clicks for you
 	NoSwordDelay = true; -- removes the sword delay
 	GoToSafeSpot = true; -- Teleports you to a safe area
 	Invis = true; -- makes you invis (kinda useless but eh)
@@ -83,6 +83,12 @@ end
 if shared.Settings.GoToSafeSpot then
 	HRP.CFrame = SafeArea;
 end 
+
+game:GetService("UserInputService").InputBegan:Connect(function(Key)
+		if Key.KeyCode == Enum.KeyCode.LeftAlt and shared.Settings.ClickTP then
+			HRP.CFrame = Mouse.hit;
+		end
+	end)
 game.RunService.RenderStepped:Connect(function()
 	if shared.Settings.AutoSwing then
 		Swing();
@@ -99,11 +105,6 @@ game.RunService.RenderStepped:Connect(function()
 			mouse1click(); -- i forgor how to do it with vui
 		end
 	end
-	game:GetService("UserInputService").InputBegan:Connect(function(Key)
-		if Key.KeyCode == Enum.KeyCode.LeftAlt and shared.Settings.ClickTP then
-			HRP.CFrame = Mouse.hit;
-		end
-	end)
 
 -- Ugly code
 	if shared.Settings.AutoFarm then
