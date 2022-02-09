@@ -113,7 +113,7 @@ else
 					end;
 				end;
 				if (GetTitan()) and (GetTitan().Hitboxes) and (GetTitan().Hitboxes.Nape) then
-					TweenTP(GetTitan().Hitboxes.Nape.CFrame * CFrame.new(0, 3.9, 0) , 0)
+					TweenTP(GetTitan().Hitboxes.Nape.CFrame * CFrame.new(0, 2.5, 0) , 0)
 					Swing();
 				end;
 			until GetTitan() == nil  or not GetTitan().Humanoid or GetTitan().Humanoid.Health <= 0;
