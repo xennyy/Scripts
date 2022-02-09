@@ -93,7 +93,6 @@ else
 	    PullOut();
 	    --Reload();
 	end);
-	 end);
 	while task.wait() do
 		if (GetTitan()) and (GetTitan():FindFirstChild('HumanoidRootPart')) and (GetTitan():FindFirstChild('Hitboxes')) and (GetTitan():FindFirstChild('Humanoid')) and (Player.Character) and (Player.Character:FindFirstChild('HumanoidRootPart')) then
 			repeat
