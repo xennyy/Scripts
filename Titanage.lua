@@ -78,6 +78,7 @@ else
 			end;
 		end;
 	end;
+	wait(3);
 	local Character = Player.Character;
 	Character.DescendantAdded:Connect(function(A_1)
 		wait(2);
