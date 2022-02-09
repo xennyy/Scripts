@@ -10,10 +10,6 @@ if (game.PlaceId == 7176980618) then
 	game:GetService("ReplicatedStorage").Remotes.DialogueEvent:InvokeServer(ohInstance1, ohString2)
 	game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-3.62658501, 5.20690823, 194.458466, -0.180813178, -2.86781372e-08, 0.983517468, 3.39784506e-10, 1, 2.92212157e-08, -0.983517468, 5.61776492e-09, -0.180813178);
 else
-	local a; a= hookfunction(getrenv().wait, function(w)
-		w = 0;
-		return a(w);
-	end)
 	local Players       =   game:GetService('Players');
 	local Player        =   Players.LocalPlayer;
 	local Tween         =   game:GetService('TweenService');
