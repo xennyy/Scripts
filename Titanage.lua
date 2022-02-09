@@ -2,7 +2,7 @@
 -- put in auto exec
 
 repeat
-	task.wait()
+	task.wait()	
 until game and game:IsLoaded() and game.Players.LocalPlayer.Character and game.Players.LocalPlayer.Character:FindFirstChild('HumanoidRootPart');
 if (game.PlaceId == 7176980618) then
 	local ohInstance1 = workspace.NPCs.Levi
@@ -81,17 +81,17 @@ else
 	wait(3);
 	local Character = Player.Character;
 	Character.DescendantAdded:Connect(function(A_1)
-		wait(2);
+		task.wait(2);
 		if A_1.Name == "Grip" then
-			wait(4)
+			task.wait(4)
 			Character:Destroy();
-			wait(7);
+			task.wait(7);
 			Tp:Teleport(7176980618);
 		end;
 	end);
 	Player.CharacterAdded:Connect(function(Character)
 	    repeat wait() until Player.Character:FindFirstChild('HumanoidRootPart') and Player.Character:FindFirstChild('ODM')
-	    wait(1);
+	    task.wait(1);
 	    PullOut();
 	    --Reload();
 	end);
