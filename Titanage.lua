@@ -89,16 +89,9 @@ else
 	end);
 	Player.CharacterAdded:Connect(function(Character)
 	    repeat wait() until Player.Character:FindFirstChild('HumanoidRootPart') and Player.Character:FindFirstChild('ODM')
-	    wait(2);
+	    wait(1);
 	    PullOut();
 	    --Reload();
-	    Character.DescendantAdded:Connect(function(A_1)
-		wait(2);
-		if A_1.Name == "Grip" then
-			Character:Destroy();
-			wait(7);
-			Tp:Teleport(7176980618);
-		end;
 	end);
 	 end);
 	while task.wait() do
