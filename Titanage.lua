@@ -74,7 +74,7 @@ else
 			end;
 		end;
 	end;
-	wait(3);
+	task.wait(4);
 	local Character = Player.Character;
 	Character.DescendantAdded:Connect(function(A_1)
 		task.wait(2);
@@ -89,6 +89,7 @@ else
 	    repeat wait() until Player.Character:FindFirstChild('HumanoidRootPart') and Player.Character:FindFirstChild('ODM')
 	    task.wait(1);
 	    PullOut();
+	    task.wait(4);
 	    --Reload();
 	end);
 	while task.wait() do
