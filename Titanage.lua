@@ -110,6 +110,9 @@ else
 					end;
 				end;
 				if (GetTitan()) and (GetTitan().Hitboxes) and (GetTitan().Hitboxes.Nape) then
+					GetTitan().Hitboxes.Nape.Size = Vector3.new(10,10,10);
+					GetTitan().Hitboxes.Nape.CanCollide = false;
+					GetTitan().Hitboxes.Nape.Transparency = 0.3
 					TweenTP(GetTitan().Hitboxes.Nape.CFrame * CFrame.new(0, -2.99, 0) , 0)
 					Swing();
 				end;
