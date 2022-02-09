@@ -82,7 +82,7 @@ else
 			task.wait(4)
 			Character:Destroy();
 			task.wait(7);
-			Tp:Teleport(7176980618);
+			Tp:Teleport(6737540754);
 		end;
 	end);
 	Player.CharacterAdded:Connect(function(Character)
