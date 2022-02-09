@@ -88,18 +88,9 @@ end)
 		end;
 	end);
 	Player.CharacterAdded:Connect(function(Character)
-	    repeat wait() until Player.Character:FindFirstChild('HumanoidRootPart') and Player.Character:FindFirstChild('ODM')
+	    repeat wait() until Character:FindFirstChild('HumanoidRootPart') and Character:FindFirstChild('ODM')
 	    wait(2);
 	    PullOut();
-	    --Reload();
-	    Character.DescendantAdded:Connect(function(A_1)
-		wait(2);
-		if A_1.Name == "Grip" then
-			Character:Destroy();
-			wait(7);
-			Tp:Teleport(7176980618);
-		end;
-	end);
 	 end);
 	while task.wait() do
 		if (GetTitan()) and (GetTitan():FindFirstChild('HumanoidRootPart')) and (GetTitan():FindFirstChild('Hitboxes')) and (GetTitan():FindFirstChild('Humanoid')) and (Player.Character) and (Player.Character:FindFirstChild('HumanoidRootPart')) then
