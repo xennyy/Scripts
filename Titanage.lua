@@ -82,6 +82,7 @@ else
 	Character.DescendantAdded:Connect(function(A_1)
 		wait(2);
 		if A_1.Name == "Grip" then
+			wait(4)
 			Character:Destroy();
 			wait(7);
 			Tp:Teleport(7176980618);
