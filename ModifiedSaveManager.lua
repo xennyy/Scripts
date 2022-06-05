@@ -136,7 +136,8 @@ local SaveManager = {} do
 		local paths = {
 			self.Folder,
 			self.Folder .. '/themes',
-			self.Folder .. '/settings'
+			self.Folder .. '/settings',
+            self.Folder .. '/settings/' .. tostring(game.PlaceId),
 		}
 
 		for i = 1, #paths do
@@ -148,7 +149,7 @@ local SaveManager = {} do
 	end
 
 	function SaveManager:RefreshConfigList()
-		local list = listfiles(self.Folder .. '/settings/' .. game.PlaceId)
+		local list = listfiles(self.Folder .. '/settings/' .. game.PlaceId .. '/')
 
 		local out = {}
 		for i = 1, #list do
